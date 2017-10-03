@@ -1,0 +1,12 @@
+<p>
+  <label for="input-name">Escribe tu nombre</label>
+  <input id="input-name" type="text" [(ngModel)]="sName">
+</p>
+<p>
+  <label for="delete-name">Borra tu nombre</label>
+  <input id="delete-name" type="button" value="Borrar nombre" (click)="borrarNombre()">
+  <input id="delete-name" type="button" value="Borrar nombre con evento" (click)="borrarNombreEvent($event)">
+</p>
+<p>
+  Hola {{sName}}
+</p>
