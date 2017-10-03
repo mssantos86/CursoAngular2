@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Curso de Angular4';
+  mivariable = 'Variable de Manolo';
 }
