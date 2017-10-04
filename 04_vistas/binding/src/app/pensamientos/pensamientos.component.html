@@ -1,0 +1,26 @@
+<p>
+  <label for="input-thought">Escribe tu pensamiento</label>
+  <input id="input-thought" type="text" [(ngModel)]="sPensamiento">
+  <button (click)= "addPensamiento()">Añadir</button>
+</p>
+
+<div *ngIf="aPensamientos.length > 0; then hayPensamientos else sinPensamientos"></div>
+
+<ng-template #hayPensamientos> 
+  <div>
+    <p>
+      lista de pensamientos
+    </p>
+    <ul>
+      <li *ngFor="let pensamiento of aPensamientos">{{pensamiento}}</li>
+    </ul>
+  </div>
+</ng-template>
+
+<ng-template #sinPensamientos>
+  <div>
+    <p>
+      No hay pensamientos
+    </p> 
+  </div> 
+</ng-template>
