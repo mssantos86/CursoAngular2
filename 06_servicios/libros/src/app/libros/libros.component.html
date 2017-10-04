@@ -1,0 +1,14 @@
+<p>
+  <input type="text" placeholder="Tema de los libros" [(ngModel)]="claveLibros"> 
+</p>
+<p>
+  <button (click)="buscarLibro()">Buscar</button>
+</p>
+<div>
+  <h2>Libros sobre {{claveLibros}}</h2>
+  <ul>
+    <li *ngFor="let libro of aLibros">
+        {{libro}}
+    </li>
+  </ul>
+</div>

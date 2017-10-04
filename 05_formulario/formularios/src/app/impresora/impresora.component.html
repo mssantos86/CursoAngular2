@@ -1,0 +1,26 @@
+
+<h2>Selecciona Impresora</h2>
+<div *ngFor="let impresora of aImpresoras">
+  <input type="radio" name="printer" [value] = "impresora" [(ngModel)] = "impresoraSeleccionada">
+  <label>{{impresora}}</label>
+</div>
+
+<br>
+<br>
+
+<div>
+  <input type="checkbox" name="imprResultado" [(ngModel)] = "resultado" [disabled] = "!impresoraSeleccionada">
+  <label>Imprimir Resultado</label>
+  <input type="checkbox" name="tonoClaro" [(ngModel)] = "claro" [disabled] = "!impresoraSeleccionada">
+  <label>Tono Claro</label>
+</div>
+
+<p>
+<select id="select" [(ngModel)] = "provinciaSeleccionada" (ngModelChange)="avisarProvincia()">
+  <option *ngFor="let provincia of aProvincias"
+    [ngValue]="provincia">
+    {{provincia.id}} {{provincia.name}}
+  </option>
+</select>
+
+</p>
